@@ -58,7 +58,7 @@ knitr::opts_chunk$set(error =  FALSE)
 
 -   Our research question is: "Does footwear type affect running speed?"
 
--   More specifically, we want to see whether running times around a track differ when people run in **sneakers, flip-flops, running shoes, or barefoot.**
+-   More specifically, we want to see whether running times around a track differ when different people run in **sneakers, flip-flops, running shoes, or barefoot.**
 
 **Context/motivation**
 
@@ -196,6 +196,7 @@ We recorded the lap times in seconds for each run.
 # Appendices
  
  - `R` code.
+
 
 
 
