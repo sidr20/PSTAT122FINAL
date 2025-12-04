@@ -14,32 +14,34 @@ output:
     pandoc_args: null 
 geometry: margin=0.7in
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message =  FALSE)
 knitr::opts_chunk$set(warning =  FALSE)
 knitr::opts_chunk$set(error =  FALSE)
-
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(gridExtra)
 ```
 
-
-
-:::callout
-<div style="text-align: center">
-<span style="color: blue;"> **STUDENT NAME **</span> 
-</div>
-- Miles Reynolds    (A051P79)
-- Ivan Gladnikov    (A196U28)
-- Jayden Gould    (A0W8329)
-- Jaesung Kim    (3427457)
-- Sid Revanuru    (A058P90)
+:::: callout
+::: {style="text-align: center"}
+[**STUDENT NAME**]{style="color: blue;"}
 :::
 
+-   Miles Reynolds (A051P79)
+-   Ivan Gladnikov (A196U28)
+-   Jayden Gould (A0W8329)
+-   Jaesung Kim (3427457)
+-   Sid Revanuru (A058P90)
+::::
 
-::: {.callout-caution}
+::: callout-caution
 # Due Date
+
 **Due Date:** Monday, December 8, 2025, 11:59 PM
 :::
-
 
 # Introduction
 
@@ -88,17 +90,17 @@ We recorded the lap times in seconds for each run.
 -   Runner (subject): Fixed Blocking Factor
 
     -   We had five group members, but only 4 could run due to an injury. Despite our four runners coming from a larger population of potential runners, in a Latin Square design the blocking factors are treated as fixed effects due to it being a Fixed Effect Model. We are not attempting to make inferences about all runners in general and instead are using the four specific runners we tested to control for differences in baseline running speed. This is to try to isolate the effect of footwear on running times. Each runner is treated as a fixed level in the design.
-    
 
--   Day: Fixed Blocking Factor 
-    -  The Latin Square design requires predetermined blocking levels, so the “Day” factor is treated as a fixed effect. These four days of trials serve to control for time-related effects like changes in weather, personal fatigue, or other day-to-day variation so that the effect of footwear can be estimated in a more isolated way. Because the design depends on using these exact four days we laid out, each day is considered a fixed level in the blocking structure.
+-   Day: Fixed Blocking Factor
+
+    -   The Latin Square design requires predetermined blocking levels, so the “Day” factor is treated as a fixed effect. These four days of trials serve to control for time-related effects like changes in weather, personal fatigue, or other day-to-day variation so that the effect of footwear can be estimated in a more isolated way. Because the design depends on using these exact four days we laid out, each day is considered a fixed level in the blocking structure.
 
 **Design Type**
 
 -   The design can be described as: 4x4 Latin Square
 
     -   A Latin Square is a row-column design experiment where the number of rows (m levels of one nuisance factor) = number of columns (n levels of another nuisance factor) = number of treatments. This is to effectively create m x n blocks at each different combination of levels to attempt to average out variability created by both of the identified nuisance factors.
-    
+
     -   We are running a comparative experiment with one main treatment factor (footwear type), with 2 blocking factors of day and runner, which we saw as potential nuisance factors for our experiment.
 
 -   We used a 4x4 Latin Square design (Below) with 4 different days and 4 different runners as the blocking factors and used 4 different footwear type as the primary treatment factor.
@@ -132,9 +134,8 @@ latin_df <- data.frame(
 # Table
 kable(latin_df, caption = "4×4 Latin Square Design")
 ```
+
 Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
-
-
 
 **Randomization, Replication, and Blocking**
 
@@ -150,11 +151,11 @@ Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
 
     -   (Columns) Runners are the second block in our Latin Square. This is to control for:
 
-        - Natural differences in athleticism, 
-        
-        - Differences in performance of specific brands of the same shoe type
+        -   Natural differences in athleticism,
 
-        - Physical state (energy levels, soreness, etc).
+        -   Differences in performance of specific brands of the same shoe type
+
+        -   Physical state (energy levels, soreness, etc).
 
 -   **Randomization:**
 
@@ -178,9 +179,10 @@ Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
 
 -   Footwear conditions: 4 types total (Listed above)
 
--   **Total Observations**: 4x4 = 16 
+-   **Total Observations**: 4x4 = 16
 
 # Data Collection
+
 **Procedure**: Describe how and when the experiment was conducted (e.g., location, date, steps taken).
 
 -   We conducted the experiment on the outdoor track on campus over four separate days (Sunday, November 23 - Wednesday, November 26)
@@ -202,7 +204,8 @@ Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
 -   Not everyone had the exact same shoe - we kept it to type in general but not brand-specific, which could lead to deviation.
 
 -   Because we were concerned about fatigue and changing weather, we spread the data collection across four days and treated day as a block
-    - Some scheduling issues led to time delay - a real-world effect on experiment efficiency.
+
+    -   Some scheduling issues led to time delay - a real-world effect on experiment efficiency.
 
 -   Minor fluctuations in weather or track conditions across days are possible, which is one reason we used blocking and randomization.
 
@@ -239,26 +242,97 @@ latin_df2 <- data.frame(
 # Table
 kable(latin_df2, caption = "4×4 Latin Square Design with Times")
 ```
+
 Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
 
-
-Sneaker: (215.84, 229.27, 194.70, 202.4)
-Barefoot: (217.56, 232.71, 219.11, 204.19)
-Flip-flops: (220.27, 285.50, 232.93, 199.81)
-Running shoes: (205.01, 217.55, 187.34, 177.63)
-#in order of (Sid, Miles, Jaesung, Ivan), this is just listed for ease of access we need to delete this after analysis is done
+Sneaker: (215.84, 229.27, 194.70, 202.4) Barefoot: (217.56, 232.71, 219.11, 204.19) Flip-flops: (220.27, 285.50, 232.93, 199.81) Running shoes: (205.01, 217.55, 187.34, 177.63) #in order of (Sid, Miles, Jaesung, Ivan), **this is just listed for ease of access we need to delete this after analysis is done**
 
 # Analysis
 
-- **Exploratory Data**: Start with basic statistics (mean, SD) and visualizations (e.g., boxplots) to understand the data.
+-   **Exploratory Data**: Start with basic statistics (mean, SD) and visualizations (e.g., boxplots) to understand the data.
 
+```{r}
+#Data Setup For Analysis
+runner_ids <- factor(rep(c("Sid", "Miles", "Jaesung", "Ivan"), times = 4))
+day_ids <- factor(rep(c("Day 1", "Day 2", "Day 3", "Day 4"), each = 4))
 
-- **Hypothesis Testing**: Test your hypothesis with an appropriate statistical test (e.g., ANOVA).
+shoe_types <- factor(c(
+  "Sneakers", "Barefoot", "FlipFlops", "RunningShoes",
+  "Barefoot", "FlipFlops", "RunningShoes", "Sneakers",
+  "FlipFlops", "RunningShoes", "Sneakers", "Barefoot",
+  "RunningShoes", "Sneakers", "Barefoot", "FlipFlops"))
 
-- **Tables, Figures, & Code**: Include key results (ANOVA table, post-test) and relevant `R` code excerpts where needed.
+times <- c(
+  215.84, 232.71, 232.93, 177.63,
+  217.56, 285.50, 187.34, 202.40,
+  220.27, 217.55, 194.70, 204.19,
+  205.01, 229.27, 219.11, 199.81)
 
--	Use `R` to analyze the data.
+analysis_df <- data.frame(Runner = runner_ids,
+                          Day = day_ids,
+                          Shoe = shoe_types,
+                          Time = times)
+
+head(analysis_df)
+
+#Summary Statistics
+stats_summary <- analysis_df %>%
+  group_by(Shoe) %>%
+  summarise(Mean = mean(Time),
+            SD = sd(Time),
+            Min = min(Time),
+            Max = max(Time)) %>%
+  arrange(Mean)
+kable(stats_summary, caption = "Summary Statistics of Running Time by Footwear")
+
+#Vizualizations
+#Shoe Effect
+plot_shoe <- ggplot(analysis_df, aes(x = reorder(Shoe, Time), y = Time, fill = Shoe)) +
+  geom_boxplot(alpha = 0.7) +
+  geom_jitter(width = 0.1, alpha = 0.5) +
+  labs(title = "Effect of Footwear on Running Time",
+       x = "Footwear Type",
+       y = "Time (seconds)") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+#Runner Effect (Blocks)
+plot_runner <- ggplot(analysis_df, aes(x= reorder(Runner, Time), y= Time, fill = Runner)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(title = "Variation by Runner (Block 1)",
+       x = "Runner",
+       y = "Time (seconds)") +
+  theme_minimal() + 
+  theme(legend.position = "none")
+
+grid.arrange(plot_shoe, plot_runner, ncol = 2)
+```
+
+-   **Hypothesis Testing**: Test your hypothesis with an appropriate statistical test (e.g., ANOVA).
+
+```{r}
+#ANOVA Testing
+ls_model <- aov(Time ~ Runner + Day + Shoe, data = analysis_df)
+options(knitr.kable.NA = '')
+kable(anova(ls_model),
+      caption = "ANOVA Table for Latin Square Design",
+      digits = 4)
+
+#IDK IF WERE DOING POST HOC BUT CHECKING SHOE DIFFERENCE ANYWAYS
+#Post-Hoc Analysis (Which specific pairs differ)
+tukey_results <- TukeyHSD(ls_model, "Shoe", conf.level = 0.95)
+tukey_shoes <- tukey_results$Shoe
+kable(tukey_shoes,
+      caption = "Tukey HSD Pairwise Comparisons for Foorwear",
+      digits = 4)
+plot(tukey_results, las = 1, col = "blue")
+```
+
+-   **Tables, Figures, & Code**: Include key results (ANOVA table, post-test) and relevant `R` code excerpts where needed.
+
+-   Use `R` to analyze the data.
 
 # Conclusions
--	Summarize key findings.
-- Comment on limitations and possible improvements.
+
+-   Summarize key findings.
+-   Comment on limitations and possible improvements.
