@@ -62,7 +62,7 @@ knitr::opts_chunk$set(error =  FALSE)
 
 **Context/motivation**
 
--   Footwear is a big part of everyday life and sports performance. Runners often invest in specialized shoes, but people also sometimes run in casual shoes or even barefoot. We were interested in whether these different footwear choices actually lead to **measurable differences in running speed** over a fixed distance. our experiment uses a simple track setting a repeated timed runs to compare running performance across four footwear conditions.
+-   Footwear is a big part of everyday life and sports performance. Runners often invest in specialized shoes, but people also sometimes run in casual shoes or even barefoot. We were interested in whether these different footwear choices actually lead to **measurable differences in running speed** over a fixed distance of a half mile. Our experiment uses a simple track setting a repeated timed runs to compare running performance across four footwear conditions.
 
 # Experimental Design
 
@@ -196,6 +196,7 @@ We recorded the lap times in seconds for each run.
 # Appendices
  
  - `R` code.
+
 
 
 
