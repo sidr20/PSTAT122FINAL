@@ -100,7 +100,7 @@ We recorded the lap times in seconds for each run.
 
     -   We had five group members, but only 4 could run; these runners represent a small sample from a broader population of runners, and we mainly want to control for differences in baseline speed between people rather than compare these individuals specifically.
 
--   Day: Used as a blocking factor to control for time-related effects such as fatigue across days, weather, and other day-to-day variation.
+-   Day: Used as a fixed blocking factor to control for time-related effects such as fatigue across days and other day-to-day variation.
 
 **Design type**
 
@@ -154,10 +154,7 @@ We recorded the lap times in seconds for each run.
 
 -   Footwear conditions: 4 types total
 
-(You are encouraged to explore more resources for determining the sample size )
-
 # Data Collection
-
 **Procedure**: Describe how and when the experiment was conducted (e.g., location, date, steps taken).
 
 -   We conducted the experiment on the outdoor track on campus over four separate days (Sunday November 23 - Wednesday November 26)
@@ -199,5 +196,6 @@ We recorded the lap times in seconds for each run.
 # Conclusions
 -	Summarize key findings.
 - Comment on limitations and possible improvements.
+
 
 
