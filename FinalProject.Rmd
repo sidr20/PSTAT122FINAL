@@ -166,9 +166,12 @@ We recorded the lap times in seconds for each run.
 
 **Challenges/Adjustments**: Mention any difficulties or changes made during data collection (e.g., technical issues, time adjustments).
 
--   One group member had a foot injury, so they did not run and instead handled all timing to keep measurement consistent
+-   Human timekeeping can lead to human error where the lap times are not 100% accurate
+
+-   Not everyone had the exact same shoe - we kept it general but not brand-specific, could lead to deviation
 
 -   Because we were concerned about fatigue and changing weather, we spread the data collection across four days and treated day as a block
+    - Some scheduling issues led to time delay- a realworld effect on experiment efficiency
 
 -   Minor fluctuations in weather or track conditions across days are possible, which is one reason we used blocking and randomization
 
@@ -188,16 +191,3 @@ We recorded the lap times in seconds for each run.
 # Conclusions
 -	Summarize key findings.
 - Comment on limitations and possible improvements.
-
-
-# References
- (If needed.)
-
-# Appendices
- 
- - `R` code.
-
-
-
-
-
