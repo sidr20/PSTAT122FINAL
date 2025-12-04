@@ -53,27 +53,126 @@ knitr::opts_chunk$set(error =  FALSE)
 
 
 # Introduction
--	Clear statement of the objective or research question.
--	Brief context or motivation.
+
+**Research question:**
+
+-   Our research question is: "Does footwear type affect running speed?"
+
+-   More specifically, we want to see whether running times around a track differ when people run in **sneakers, flip-flops, running shoes, or barefoot.**
+
+**Context/motivation**
+
+-   Footwear is a big part of everyday life and sports performance. Runners often invest in specialized shoes, but people also sometimes run in casual shoes or even barefoot. We were interested in whether these different footwear choices actually lead to **measurable differences in running speed** over a fixed distance. our experiment uses a simple track setting a repeated timed runs to compare running performance across four footwear conditions.
 
 # Experimental Design
-- Description of factors and treatment structure.
-- Clearly state what you are measuring and the units.
-Examples: Number of words recalled (count), reaction time (seconds), taste rating (1–5 scale).
-- Identify which factors are fixed vs. random.
-- Description of design type (CRD, RCBD, factorial, etc.).
-- Explain how randomization, replication, and (if used) blocking were implemented.
-- Sample size: Provide number of observations per condition.
-Guideline: 5–10 per treatment for CRD, 3–5 blocks for RCBD, total feasible within 1 hour.
+
+**Factors and treatment structure**
+
+-   Factor (treatment): Footwear type
+
+-   Levels (4):
+
+    -   Sneakers
+
+    -   Flip-flops
+
+    -   Running shoes
+
+    -   Barefoot
+
+Each observation in our data-set is a single timed lap around the track under one of these four footwear conditions
+
+**Response variable and units**
+
+-   Response variable: Time to complete two laps around the track
+
+-   Units: Seconds (continuous)
+
+We recorded the lap times in seconds for each run.
+
+**Fixed vs. random factors**
+
+-   Footwear type: Fixed factor
+
+    -   We are specifically interested in these four footwear conditions, so the levels are not randomly sampled from a larger population of footwear types.
+
+-   Runner (subject): Can be treated as a random effect/source of variability
+
+    -   We had five group members, but only 4 could run; these runners represent a small sample from a broader population of runners, and we mainly want to control for differences in baseline speed between people rather than compare these individuals specifically.
+
+-   Day: Used as a blocking factor to control for time-related effects such as fatigue across days, weather, and other day-to-day variation.
+
+**Design type**
+
+-   The design can be described as:
+
+    -   A comparative experiment with one main treatment factor (footwear type), with blocking by day to reduce variability due to changing conditions (fatigue, weather, etc.)
+
+-   We used a random design with day as a blocking factor and footwear type as the primary treatment factor (edit later)
+
+**Randomization, replication, and blocking**
+
+-   **Blocking:**
+
+    -   We ran the experiment over 4 separate days
+
+    -   We treated "day" as a block to control for:
+
+        -   Changes in weather,
+
+        -   Possible fatigue from previous days,
+
+        -   Other day-to-day conditions that could affect running times.
+
+-   **Randomization:**
+
+    -   On each day, we randomized which footwear each runner would use for tat day.
+
+    -   The order of footwear across days was randomized so that no particular footwear was always run on the "best" or "worst" day.
+
+-   **Replication:**
+
+    -   Each active runner completed two laps in the same footwear condition on a given day
+
+    -   We also have replication across runners, since multiple people ran in the same footwear type.
+
+**Sample size**: Provide number of observations per condition. Guideline: 5–10 per treatment for CRD, 3–5 blocks for RCBD, total feasible within 1 hour.
+
+-   Number of runners: 4 (one group member had a foot injury and served as timekeeper)
+
+-   Runs per runner per condition: 1 run (2 laps) in the same footwear on that day.
+
+-   Number of days (blocks): 4
+
+-   Footwear conditions: 4 types total
 
 (You are encouraged to explore more resources for determining the sample size )
 
-
-
 # Data Collection
-- **Procedure**: Describe how and when the experiment was conducted (e.g., location, date, steps taken).
-- **Challenges/Adjustments**: Mention any difficulties or changes made during data collection (e.g., technical issues, time adjustments).
-- **Data Presentation**: Display the collected data in tables or graphs, summarizing key measures like mean and standard deviation..
+
+**Procedure**: Describe how and when the experiment was conducted (e.g., location, date, steps taken).
+
+-   We conducted the experiment on an outdoor track on campus over four separate days
+
+-   On each day, the same 4 group members who were able to run came to the track.
+
+-   The fifth member had a foot injury and served as the designated time keeper, using a stopwatch to record lap times.
+
+-   At the start of each day, we randomly assigned each the footwear conditions for all runners on that day.
+
+-   Each runner then completed two laps around the track in that assigned footwear.
+
+-   At the end of the two laps, the time keeper recorded the lap time in seconds.
+
+**Challenges/Adjustments**: Mention any difficulties or changes made during data collection (e.g., technical issues, time adjustments).
+
+-   One group member had a foot injury, so they did not run and instead handled all timing to keep measurement consistent
+
+-   Because we were concerned about fatigue and changing weather, we spread the data collection across four days and treated day as a block
+
+-   Minor fluctuations in weather or track conditions across days are possible, which is one reason we used blocking and randomization
+
+**Data Presentation**: Display the collected data in tables or graphs, summarizing key measures like mean and standard deviation..
 
 # Analysis
 
@@ -97,5 +196,6 @@ Guideline: 5–10 per treatment for CRD, 3–5 blocks for RCBD, total feasible w
 # Appendices
  
  - `R` code.
+
 
 
