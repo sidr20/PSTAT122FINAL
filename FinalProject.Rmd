@@ -124,7 +124,13 @@ We recorded the lap times in seconds for each run.
 
         -   Other day-to-day conditions that could affect running times.
 
-   -    Runners are the second block. This controls for athleticism, specific brand shoe type, and physical state (energy levels, soreness, etc).
+    -   Runners are the second block in our Latin Square. This is to control for:
+
+        - Differences in athleticism, 
+        
+        - Specific brands of the same shoe type
+
+        - Physical state (energy levels, soreness, etc).
 
 -   **Randomization:**
 
@@ -154,28 +160,28 @@ We recorded the lap times in seconds for each run.
 
 **Procedure**: Describe how and when the experiment was conducted (e.g., location, date, steps taken).
 
--   We conducted the experiment on an outdoor track on campus over four separate days
+-   We conducted the experiment on the outdoor track on campus over four separate days (Sunday November 23 - Wednesday November 26)
 
 -   On each day, the same 4 group members who were able to run came to the track.
 
 -   The fifth member had a foot injury and served as the designated time keeper, using a stopwatch to record lap times.
 
--   At the start of each day, we randomly assigned each the footwear conditions for all runners on that day.
+-   At the start of each day, we randomly assigned each the footwear conditions for all runners on that day, according to the predetermined 4x4 Latin Square.
 
 -   Each runner then completed two laps around the track in that assigned footwear.
 
--   At the end of the two laps, the time keeper recorded the lap time in seconds.
+-   At the end of the two laps, the time keeper recorded the lap time in seconds, keeping track on a piece of paper.
 
 **Challenges/Adjustments**: Mention any difficulties or changes made during data collection (e.g., technical issues, time adjustments).
 
--   Human timekeeping can lead to human error where the lap times are not 100% accurate
+-   Human timekeeping can lead to human error where the lap times are not 100% accurate.
 
--   Not everyone had the exact same shoe - we kept it general but not brand-specific, could lead to deviation
+-   Not everyone had the exact same shoe - we kept it general but not brand-specific, could lead to deviation.
 
 -   Because we were concerned about fatigue and changing weather, we spread the data collection across four days and treated day as a block
-    - Some scheduling issues led to time delay- a realworld effect on experiment efficiency
+    - Some scheduling issues led to time delay - a realworld effect on experiment efficiency
 
--   Minor fluctuations in weather or track conditions across days are possible, which is one reason we used blocking and randomization
+-   Minor fluctuations in weather or track conditions across days are possible, which is one reason we used blocking and randomization.
 
 **Data Presentation**: Display the collected data in tables or graphs, summarizing key measures like mean and standard deviation..
 
@@ -193,4 +199,5 @@ We recorded the lap times in seconds for each run.
 # Conclusions
 -	Summarize key findings.
 - Comment on limitations and possible improvements.
+
 
