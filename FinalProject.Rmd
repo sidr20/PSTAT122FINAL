@@ -80,7 +80,7 @@ knitr::opts_chunk$set(error =  FALSE)
 
     -   Barefoot
 
-Each observation in our data-set is a single timed lap around the track under one of these four footwear conditions
+Each observation in our data-set is two timed laps (one half mile) around the track under one of these four footwear conditions
 
 **Response variable and units**
 
@@ -104,17 +104,17 @@ We recorded the lap times in seconds for each run.
 
 **Design type**
 
--   The design can be described as:
+-   The design can be described as: 4x4 Latin Square
 
     -   A comparative experiment with one main treatment factor (footwear type), with blocking by day to reduce variability due to changing conditions (fatigue, weather, etc.)
 
--   We used a random design with day as a blocking factor and footwear type as the primary treatment factor (edit later)
+-   We used a 4x4 Latin Square design with day and runners as the blocking factors and footwear type as the primary treatment factor
 
 **Randomization, replication, and blocking**
 
 -   **Blocking:**
 
-    -   We ran the experiment over 4 separate days
+    -   We ran the experiment over 4 separate days each day with 4 independent runners
 
     -   We treated "day" as a block to control for:
 
@@ -124,9 +124,11 @@ We recorded the lap times in seconds for each run.
 
         -   Other day-to-day conditions that could affect running times.
 
+   -    Runners are the second block. This controls for athleticism, specific brand shoe type, and physical state (energy levels, soreness, etc).
+
 -   **Randomization:**
 
-    -   On each day, we randomized which footwear each runner would use for tat day.
+    -   On each day, we randomized which footwear each runner would use for that day.
 
     -   The order of footwear across days was randomized so that no particular footwear was always run on the "best" or "worst" day.
 
@@ -191,3 +193,4 @@ We recorded the lap times in seconds for each run.
 # Conclusions
 -	Summarize key findings.
 - Comment on limitations and possible improvements.
+
