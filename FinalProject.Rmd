@@ -353,4 +353,8 @@ The Residuals v Fitted plot is used to check the assumption of homoscedasticity,
 The residuals are fairly evenly scattered around the horizontal zero line, indicating that the model does not show evidence of heteroscedasticity, which is necessary for the model to work properly.
 The normal Q-Q Plot allows us to see that the residuals are normally distributed, which we need for ANOVA. Here, it's close enough, given that our dataset is only 16 observations. These two tests are just key checks to ensure that ANOVA is running smoothly.\
 \
-One of the drawbacks of this experiment was the different shoes runners were wearing. Although every runner ran with each kind of shoe, the specific brand and model of each shoe was not controlled for. This could have led to some runners having better or worse shoes than others, which could have affected their times; this could have played a part in our ANOVA not being significant for the shoes.
+One of the drawbacks of this experiment was the different shoes runners were wearing. Although every runner ran with each "type" of footwear, the specific brand and model of each shoe was not controlled for. This could have led to some runners having better or worse shoes than others, which could have affected their times; this could have played a part in our ANOVA not being significant for the shoes. 
+\
+Another drawback of our design is that we only obtained one observation per (runner, day, footwear) cell in the 4x4 Latin square, due to limited time and the physical demand of our experiment. This means we cannot separate interaction effects from random error, and any unusual run directly inflates the error term. With only one observation per cell and few error degrees of freedom, our estimate of variability is unstable and the ANOVA has lower power to detect real differences between footwear types. 
+
+
