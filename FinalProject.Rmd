@@ -49,11 +49,11 @@ library(gridExtra)
 
 -   Our research question is: "Does footwear type affect running speed?"
 
--   More specifically, we want to see whether running times around a track significantly differ when different people run in **sneakers, flip-flops, running shoes, or barefoot.**
+-   More specifically, we want to see whether the time it takes to run around the track significantly differs when different people run in **sneakers, flip-flops, running shoes, or barefoot.**
 
 **Context/Motivation**
 
--   Footwear is a big part of everyday life and sports performance. Runners often invest in specialized shoes, but regular people also sometimes run in casual shoes or even barefoot. We were interested in whether these different footwear choices actually lead to **measurable differences in running speed** over a fixed distance of a half mile around a track. Our experiment uses a simple 400 m track setting with repeated timed runs to compare running performance across four different footwear conditions.
+-   Footwear is a big part of everyday life and sports performance. Runners often invest in specialized shoes, but regular people also sometimes run in casual shoes or even barefoot. We were interested in whether these different footwear choices actually lead to **measurable differences in running speed** over a fixed distance of a half mile around the track. Our experiment uses a simple 400 m track setting with repeated timed runs to compare running performance across four different footwear conditions.
 
 # Experimental Design
 
@@ -71,7 +71,7 @@ library(gridExtra)
 
     -   Running Shoes
 
-Each observation in our data-set is two timed laps (one half mile) around the track under one of these four footwear conditions
+Each observation in our dataset is two timed laps (1/2 mile) around the track under one of these four footwear conditions
 
 **Response Variable and Units**
 
@@ -89,7 +89,7 @@ We recorded the lap times in seconds for each run.
 
 -   Runner (subject): Fixed Blocking Factor
 
-    -   We had five group members, but only 4 could run due to an injury. Despite our four runners coming from a larger population of potential runners, in a Latin Square design the blocking factors are treated as fixed effects due to it being a Fixed Effect Model. We are not attempting to make inferences about all runners in general and instead are using the four specific runners we tested to control for differences in baseline running speed. This is to try to isolate the effect of footwear on running times. Each runner is treated as a fixed level in the design.
+    -   We had five group members, but only 4 could run due to an injury. Despite our four runners coming from a larger population of potential runners, in a Latin Square design, the blocking factors are treated as fixed effects due to it being a Fixed Effect Model. We are not attempting to make inferences about all runners in general and instead are using the four specific runners we tested to control for differences in baseline running speed. This is to try to isolate the effect of footwear on running times. Each runner is treated as a fixed level in the design.
 
 -   Day: Fixed Blocking Factor
 
@@ -97,13 +97,13 @@ We recorded the lap times in seconds for each run.
 
 **Design Type**
 
--   The design can be described as: 4x4 Latin Square
+-   The design can be described as a 4x4 Latin Square
 
-    -   A Latin Square is a row-column design experiment where the number of rows (m levels of one nuisance factor) = number of columns (n levels of another nuisance factor) = number of treatments. This is to effectively create m x n blocks at each different combination of levels to attempt to average out variability created by both of the identified nuisance factors.
+    -   A Latin Square is a row-column design experiment where the number of rows (m levels of one nuisance factor) = number of columns (n levels of another nuisance factor) = number of treatments. This is to effectively create (m * n) blocks at each different combination of levels to attempt to average out the variability created by both of the identified nuisance factors.
 
     -   We are running a comparative experiment with one main treatment factor (footwear type), with 2 blocking factors of day and runner, which we saw as potential nuisance factors for our experiment.
 
--   We used a 4x4 Latin Square design (Below) with 4 different days and 4 different runners as the blocking factors and used 4 different footwear type as the primary treatment factor.
+-   We used a 4x4 Latin Square design (Below) with 4 different days and 4 different runners as the blocking factors and used 4 different footwear types as the primary treatment factor.
 
 ```{r, echo = FALSE}
 library(knitr)
@@ -141,7 +141,7 @@ Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
 
 -   **Blocking:**
 
-    -   We ran the experiment over 4 separate days each day with 4 independent runners, as these were the two blocking factors we decided on.
+    -   We ran the experiment over 4 separate days, each day with 4 independent runners, as these were the two blocking factors we decided on.
 
     -   (Rows) We treated "day" as a block to control for:
 
@@ -161,7 +161,7 @@ Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
 
     -   On each day, we randomized which footwear each runner would use for that day, according to the predetermined Latin Square Design shown above.
 
-    -   The order of footwear across days was randomized for each individual so that no particular footwear was always run on the "best" or "worst" day.
+    -   The order of footwear across days was randomized for each individual such that no particular footwear was always run on the "best" or "worst" day.
 
 -   **Replication:**
 
@@ -179,37 +179,37 @@ Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
 
 -   Footwear conditions: 4 types total (Listed above)
 
--   **Total Observations**: 4x4 = 16
+-   **Total Observations**: 4*4 = 16
 
 # Data Collection
 
-**Procedure**: Describe how and when the experiment was conducted (e.g., location, date, steps taken).
+**Procedure**:
 
--   We conducted the experiment on the outdoor track on campus over four separate days (Sunday, November 23 - Wednesday, November 26)
+-   We conducted the experiment on the outdoor track on campus over 4 separate days (Sunday, November 23 - Wednesday, November 26)
 
 -   On each day, the same 4 group members who were able to run came to the track.
 
--   The fifth member had a foot injury and served as the designated time keeper, using a stopwatch to record lap times.
+-   The 5th member had a foot injury and served as the designated time keeper, using a stopwatch to record lap times.
 
--   At the start of each day, we each put on the randomly assigned footwear we were listed at for that specific day, according to the predetermined 4x4 Latin Square.
+-   At the start of each day, we each put on the randomly assigned footwear we were assigned for that specific day, according to the predetermined 4x4 Latin Square.
 
 -   Each runner then completed two laps around the track in their assigned footwear.
 
 -   At the end of the two laps, the time keeper recorded the lap time in seconds, keeping track on a piece of paper.
 
-**Challenges/Adjustments**: Mention any difficulties or changes made during data collection (e.g., technical issues, time adjustments).
+**Challenges/Adjustments**:
 
--   Human timekeeping can lead to human error where the lap times are not 100% accurate.
+-   Human timekeeping can lead to human error, where the lap times are not 100% accurate.
 
--   Not everyone had the exact same shoe - we kept it to type in general but not brand-specific, which could lead to deviation.
+-   Not everyone had the exact same shoe - we made sure the type of shoes were the same, but they were not brand-specific, which could lead to deviation.
 
--   Because we were concerned about fatigue and changing weather, we spread the data collection across four days and treated day as a block
+-   Because we were concerned about fatigue and changing weather, we spread the data collection across four days and treated each day as a block
 
-    -   Some scheduling issues led to time delay - a real-world effect on experiment efficiency.
+    -   Some scheduling issues led to a time delay - a real-world effect on experiment efficiency.
 
 -   Minor fluctuations in weather or track conditions across days are possible, which is one reason we used blocking and randomization.
 
-**Data Presentation**: Display the collected data in tables or graphs, summarizing key measures like mean and standard deviation..
+**Data Presentation**: 
 
 Raw Time Data Collected:
 
@@ -245,7 +245,6 @@ kable(latin_df2, caption = "4×4 Latin Square Design with Times")
 
 Where: "A" = Sneakers, "B" = Barefoot, "C" = Flip-Flops, "D" = Running Shoes
 
-Sneaker: (215.84, 229.27, 194.70, 202.4) Barefoot: (217.56, 232.71, 219.11, 204.19) Flip-flops: (220.27, 285.50, 232.93, 199.81) Running shoes: (205.01, 217.55, 187.34, 177.63) #in order of (Sid, Miles, Jaesung, Ivan), **this is just listed for ease of access we need to delete this after analysis is done**
 
 # Analysis
 
@@ -294,7 +293,7 @@ plot_shoe <- ggplot(analysis_df, aes(x = reorder(Shoe, Time), y = Time, fill = S
        x = "Footwear Type",
        y = "Time (seconds)") +
   theme_minimal() +
-  theme(legend.position = "none")
+  theme(legend.position = "none", plot.title = element_text(size = 11))
 
 #Runner Effect (Blocks)
 plot_runner <- ggplot(analysis_df, aes(x= reorder(Runner, Time), y= Time, fill = Runner)) +
@@ -308,7 +307,7 @@ plot_runner <- ggplot(analysis_df, aes(x= reorder(Runner, Time), y= Time, fill =
 grid.arrange(plot_shoe, plot_runner, ncol = 2)
 ```
 
--   **Hypothesis Testing**: Test your hypothesis with an appropriate statistical test (e.g., ANOVA).
+-   **Hypothesis Testing**: 
 
 ```{r}
 #ANOVA Testing
@@ -317,7 +316,11 @@ options(knitr.kable.NA = '')
 kable(anova(ls_model),
       caption = "ANOVA Table for Latin Square Design",
       digits = 4)
+```
 
+-   **Tables, Figures, & Code**: 
+
+```{r}
 #IDK IF WERE DOING POST HOC BUT CHECKING SHOE DIFFERENCE ANYWAYS
 #Post-Hoc Analysis (Which specific pairs differ)
 tukey_results <- TukeyHSD(ls_model, "Shoe", conf.level = 0.95)
@@ -325,28 +328,29 @@ tukey_shoes <- tukey_results$Shoe
 kable(tukey_shoes,
       caption = "Tukey HSD Pairwise Comparisons for Foorwear",
       digits = 4)
-plot(tukey_results, las = 1, col = "blue")
+```
 
+```{r, fig.height=4}
+par(mar = c(5, 12, 4, 2))
+plot(tukey_results, las = 1, col = "blue")
+```
+
+```{r, fig.height = 4}
 plot(ls_model, which = 1,
 main = "Residuals vs Fitted Values")
-
 plot(ls_model, which = 2,
 main = "Normal Q–Q Plot of Residuals")
 ```
 
--   **Tables, Figures, & Code**: Include key results (ANOVA table, post-test) and relevant `R` code excerpts where needed.
-
--   Use `R` to analyze the data.
 
 # Conclusions
 
 Our ANOVA analysis tells us many things about our experiment. The first thing that we notice is that the p-value for the shoe is technically not statistically significant using our base $\alpha = .05$. This is despite the summary statistics showing us that running shoes seem to make the runner faster overall. Although very close, the p-value of .0525 tells us that we don't quite have enough evidence to claim that the shoe you are wearing significantly affects running speed. However, we do see that the blocking factor, *runner*, is statistically significant with a p-value of .0233. This tells us that choosing the runner as a blocking factor was a good idea for the model because it had an effect on the data. On the other hand, blocking the days was not as useful to the model based on the high p-value of .6120.\
 \
-Looking at the box plots, we can see the reasoning behind the hypothesis test much easier. Looking first at the shoe box-plot, we see that the runners, on average, ran the fastest in running shoes, followed by sneakers, barefoot, and finally flip-flops. The flip-flops had a much higher variance than the other shoes, which could be due to the fact that flip-flops are not designed for running and could lead to inconsistent performance. The visual differences, however, are not enough to achieve a significant result, as we saw from the ANOVA, showing us truly how powerful a $\alpha = .05$ hypothesis test can be. Switching gears to the runner box-plot, we can clearly see that there is a lot of variability between runners. Some runners are just naturally faster and more consistent than others, which is why blocking for a runner was a good idea. This visual difference was enough to achieve significance in our ANOVA test.\
+Looking at the box plots, we can see the reasoning behind the hypothesis test much more easily. Looking first at the shoe box-plot, we see that the runners, on average, ran the fastest in running shoes, followed by sneakers, barefoot, and finally flip-flops. The flip-flops had a much higher variance than the other shoes, which could be due to the fact that flip-flops are not designed for running and could lead to inconsistent performance. The visual differences, however, are not enough to achieve a significant result, as we saw from the ANOVA, showing us truly how powerful a $\alpha = .05$ hypothesis test can be. Switching gears to the runner box-plot, we can clearly see that there is a lot of variability between runners. Some runners are just naturally faster and more consistent than others, which is why blocking for a runner was a good idea. This visual difference was enough to achieve significance in our ANOVA test.\
 \
-The Residuals vs. Fitted plot is used to check the assumption of homoscedasticity, that the variance of the errors is constant across all predicted values.
+The Residuals v Fitted plot is used to check the assumption of homoscedasticity, that the variance of the errors is constant across all predicted values.
 The residuals are fairly evenly scattered around the horizontal zero line, indicating that the model does not show evidence of heteroscedasticity, which is necessary for the model to work properly.
-The normal Q-Q Plot allows for us to see that the residuals are normally distributed, which we need for Anova. Here, it's close enough, given that our dataset is only 16 observations. These two tests are just key checks to ensure that Anova is running smoothly.\
+The normal Q-Q Plot allows us to see that the residuals are normally distributed, which we need for ANOVA. Here, it's close enough, given that our dataset is only 16 observations. These two tests are just key checks to ensure that ANOVA is running smoothly.\
 \
 One of the drawbacks of this experiment was the different shoes runners were wearing. Although every runner ran with each kind of shoe, the specific brand and model of each shoe was not controlled for. This could have led to some runners having better or worse shoes than others, which could have affected their times; this could have played a part in our ANOVA not being significant for the shoes.
-
